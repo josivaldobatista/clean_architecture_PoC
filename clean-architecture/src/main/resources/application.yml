@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: "CleanArchitecture"
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/cleanarch
+
+jfb:
+  client:
+    address:
+      url: http://localhost:8082/addresses
