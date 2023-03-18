@@ -1,5 +1,6 @@
 package com.jfb.cleanarchitecture.entrypoint.controller
 
+import com.jfb.cleanarchitecture.core.usecase.DeleteCustomerByIdUseCase
 import com.jfb.cleanarchitecture.core.usecase.FindCustomerByIdUseCase
 import com.jfb.cleanarchitecture.core.usecase.InsertCustomerUseCase
 import com.jfb.cleanarchitecture.core.usecase.UpdateCustomerUserCase
@@ -7,6 +8,7 @@ import com.jfb.cleanarchitecture.entrypoint.controller.mapper.CustomerMapper
 import com.jfb.cleanarchitecture.entrypoint.controller.request.CustomerRequest
 import com.jfb.cleanarchitecture.entrypoint.controller.response.CustomerResponse
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
@@ -22,6 +24,7 @@ class CustomerController(
     private val insertCustomerUseCase: InsertCustomerUseCase,
     private val findCustomerByIdUseCase: FindCustomerByIdUseCase,
     private val updateCustomerUserCase: UpdateCustomerUserCase,
+    private val deleteCustomerByIdUseCase: DeleteCustomerByIdUseCase,
     private val customerMapper: CustomerMapper
 ) {
 
@@ -53,5 +56,12 @@ class CustomerController(
         return ResponseEntity.noContent().build()
     }
 
+    @DeleteMapping("/{id}")
+    fun delete(
+        @PathVariable("id") id: String
+    ): ResponseEntity<Void> {
+        deleteCustomerByIdUseCase.delete(id)
+        return ResponseEntity.noContent().build()
+    }
 
 }
