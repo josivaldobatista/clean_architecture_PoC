@@ -4,6 +4,16 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/cleanarch
+  kafka:
+    group-id: jfbatis
+    enabled: true
+    topic:
+      consumer:
+        customer: customer
+      producer:
+        delivery: delivery
+    bootstrap-servers:
+      localhost:9092
 
 jfb:
   client:
