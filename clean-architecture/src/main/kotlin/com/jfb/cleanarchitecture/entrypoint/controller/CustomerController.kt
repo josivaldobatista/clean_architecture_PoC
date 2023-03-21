@@ -5,6 +5,7 @@ import com.jfb.cleanarchitecture.core.usecase.FindCustomerByIdUseCase
 import com.jfb.cleanarchitecture.core.usecase.InsertCustomerUseCase
 import com.jfb.cleanarchitecture.core.usecase.UpdateCustomerUserCase
 import com.jfb.cleanarchitecture.entrypoint.controller.mapper.CustomerMapper
+import com.jfb.cleanarchitecture.entrypoint.controller.mapper.toCustomer
 import com.jfb.cleanarchitecture.entrypoint.controller.request.CustomerRequest
 import com.jfb.cleanarchitecture.entrypoint.controller.response.CustomerResponse
 import org.springframework.http.ResponseEntity
@@ -32,7 +33,7 @@ class CustomerController(
     fun insert(
         @Valid @RequestBody customerRequest: CustomerRequest
     ): ResponseEntity<Void> {
-        val customer = customerMapper.toCustomer(customerRequest)
+        val customer = customerRequest.toCustomer()
         insertCustomerUseCase.insert(customer, customerRequest.zipCode)
         return ResponseEntity.ok().build()
     }
@@ -49,7 +50,7 @@ class CustomerController(
         @PathVariable("id") id: String,
         @Valid @RequestBody customerRequest: CustomerRequest
     ): ResponseEntity<Void> {
-        val customer = customerMapper.toCustomer(customerRequest)
+        val customer = customerRequest.toCustomer()
         customer.id  = id
 
         updateCustomerUserCase.update(customer, customerRequest.zipCode)

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration
 class DeleteCustomerByIdConfig {
 
     @Bean
-    fun deleteCustomerByIdConfig(
+    fun deleteCustomerByIdConfigUseCase(
         findCustomerByIdUseCaseImpl: FindCustomerByIdUseCaseImpl,
         deleteCustomerByIdImpl: DeleteCustomerByIdImpl
     ): DeleteCustomerByIdUseCaseImpl {

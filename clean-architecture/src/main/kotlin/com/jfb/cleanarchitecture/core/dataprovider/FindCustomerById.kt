@@ -5,5 +5,5 @@ import java.util.Optional
 
 interface FindCustomerById {
 
-    fun find(id: String): Optional<Customer>
+    fun find(id: String?): Optional<Customer>
 }

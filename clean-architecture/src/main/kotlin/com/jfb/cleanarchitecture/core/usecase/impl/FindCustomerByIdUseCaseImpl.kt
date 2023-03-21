@@ -9,7 +9,7 @@ class FindCustomerByIdUseCaseImpl(
     private val findCustomerById: FindCustomerById
 ): FindCustomerByIdUseCase {
 
-    override fun find(id: String): Customer {
+    override fun find(id: String?): Customer {
         return findCustomerById.find(id).orElseThrow {
             NotFoundException("Customer not found", "ERROR_CA001")
         }

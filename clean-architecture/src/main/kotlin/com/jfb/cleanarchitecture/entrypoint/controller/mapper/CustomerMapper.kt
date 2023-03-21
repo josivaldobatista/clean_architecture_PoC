@@ -3,10 +3,12 @@ package com.jfb.cleanarchitecture.entrypoint.controller.mapper
 import com.jfb.cleanarchitecture.core.domain.Customer
 import com.jfb.cleanarchitecture.entrypoint.controller.request.CustomerRequest
 import com.jfb.cleanarchitecture.entrypoint.controller.response.CustomerResponse
-import org.mapstruct.Mapper
-import org.mapstruct.Mapping
+import org.mapstruct.*
 
-@Mapper(componentModel = "spring")
+@Mapper(
+    componentModel = "spring",
+    nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,
+    nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
 interface CustomerMapper {
 
     @Mapping(target = "id", ignore = true)

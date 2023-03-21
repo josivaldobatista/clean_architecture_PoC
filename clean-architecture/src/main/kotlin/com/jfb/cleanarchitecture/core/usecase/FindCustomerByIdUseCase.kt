@@ -4,5 +4,5 @@ import com.jfb.cleanarchitecture.core.domain.Customer
 
 interface FindCustomerByIdUseCase {
 
-    fun find(id: String): Customer
+    fun find(id: String?): Customer
 }

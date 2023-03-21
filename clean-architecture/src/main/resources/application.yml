@@ -1,9 +1,17 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: "CleanArchitecture"
   data:
     mongodb:
-      uri: mongodb://localhost:27017/cleanarch
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: root
+      database: cleanarch
   kafka:
     group-id: jfbatis
     enabled: true
@@ -18,4 +26,4 @@ spring:
 jfb:
   client:
     address:
-      url: http://localhost:8082/addresses
+      url: http://localhost:8088/addresses

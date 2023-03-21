@@ -13,8 +13,8 @@ class FindCustomerByIdImpl(
     private val customerEntityMapper: CustomerEntityMapper
 ): FindCustomerById {
 
-    override fun find(id: String): Optional<Customer> {
-        var customerEntity = customerRepository.findById(id)
+    override fun find(id: String?): Optional<Customer> {
+        val customerEntity = customerRepository.findById(id!!)
         return customerEntity.map { entity -> customerEntityMapper.toCustomer(entity) }
     }
 }
