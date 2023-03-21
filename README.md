@@ -1,9 +1,9 @@
 # PoC para Clean Architecture
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/josivaldobatista/pesquisa-game/blob/main/LICENSE)
-## Arquitetura Hexagonal
+## Clean Architecture
 
-Nesse projeto foi apenas abordado os aspectos relacionados a Arquitetura Hexagonal, outros temas como segurança, validações e outros não foi implementado.
+Nesse projeto foi apenas abordado os aspectos relacionados a Clean Architecture, outros temas como segurança, validações e outros não foi implementado.
 
 ![Arquitetura](https://github.com/josivaldobatista/clean_architecture_PoC/blob/main/img/CleanArchitecture.jpg) 
 ## Fluxo do projeto
@@ -18,8 +18,11 @@ Nesse projeto foi apenas abordado os aspectos relacionados a Arquitetura Hexagon
 - MongoDB
 - Kafka
 - Spring Cloud OpenFeign
+- e outros
 
 # Como executar o projeto
+Rodar o docker compose e rodar o projeto
+
 ## Back end
 - Pré-requisitos: Java 17
 - Docker
