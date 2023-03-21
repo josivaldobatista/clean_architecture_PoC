@@ -3,7 +3,7 @@
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/josivaldobatista/pesquisa-game/blob/main/LICENSE)
 ## Clean Architecture
 
-Nesse projeto foi apenas abordado os aspectos relacionados a Clean Architecture, outros temas como segurança, validações e outros não foi implementado.
+Nesse projeto foi apenas abordado os aspectos relacionados a Clean Architecture, outros temas como segurança, validações e outros temas não foram implementado.
 
 ![Arquitetura](https://github.com/josivaldobatista/clean_architecture_PoC/blob/main/img/CleanArchitecture.jpg) 
 ## Fluxo do projeto
