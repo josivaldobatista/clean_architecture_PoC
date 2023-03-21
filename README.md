@@ -8,6 +8,7 @@ Nesse projeto foi apenas abordado os aspectos relacionados a Clean Architecture,
 ![Arquitetura](https://github.com/josivaldobatista/clean_architecture_PoC/blob/main/img/CleanArchitecture.jpg) 
 ## Fluxo do projeto
 ![Arquitetura](https://github.com/josivaldobatista/clean_architecture_PoC/blob/main/img/Screenshot-from-2020-05-20-23-29-10.png)
+![Arquitetura](https://github.com/josivaldobatista/hexagonal_architecture_PoC/blob/main/img/hexagonal_architecture_kafka.png)
 
 # Tecnologias utilizadas
 ## Back end
